@@ -1,0 +1,35 @@
+
+    <div class="container mt-3 ml-0">
+      <div class=" d-flex flex-row justify-content-evenely flex-wrap ">
+        <div class="row-xs-1 row-xs-1 ml-1" *ngFor="let card of cardData let i=index">
+          <div class="card" [ngClass]="{ 'card-medium': isMediumScreen, 'card-small': isSmallScreen }" style="padding: 10px; margin: 10px; position: relative;">
+              <span class="badge badge-primary rounded-circle badge-circle position-absolute top-0 start-0 bg-light text-warning">{{ i+1 }}</span>
+            <!-- Your existing card HTML structure goes here -->
+            <div class="image-container">
+              <img src="https://picsum.photos/200" alt="Card Image" width="150px" height="150px">
+              <span class="video-icon"><i class="bi bi-play-circle text-warning m-1"></i></span>
+            </div>
+    
+            <div class="card-content">
+                
+              <h2>{{ card.title }}</h2>
+              <h2>{{ card.channel }}</h2>
+              <h4>{{ card.voiss }}</h4>
+    
+              <!-- Your existing content for each card goes here -->
+              <div class="d-flex justify-content-between m-2">
+                <!-- Your SVG icons for each card goes here -->
+                <i class="bi bi-plus-circle m-1">10</i>
+                <i class="bi bi-heart fa-6x text-danger m-1">5</i>
+              </div>
+    
+              <div class="button-container d-flex justify-content-between">
+                <button type="button" class="btn btn-warning">Button1</button>
+                <button type="button" class="btn btn-warning">Button2</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
